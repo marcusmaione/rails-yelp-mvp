@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-4">
+      <!-- One of three columns -->
+    </div>
+
+    <div class="col-sm-4">
+      <div style="margin-left: 20px">
+        <h1><%= @restaurant.name %></h1>
+
+        <ul>
+          <li><%= @restaurant.category %></li>
+          <li><%= @restaurant.address %></li>
+          <li><%= @restaurant.phone_number %></li>
+        </ul>
+
+        <div style="text-align: center">
+          <%= link_to "See all reviews" , restaurant_reviews_path(@restaurant), class: 'btn btn-primary' %>
+        </div>
+        <br>
+
+        <div style="text-align: center">
+          <%= link_to "Edit restaurant" , edit_restaurant_path, class: 'btn btn-primary' %>
+        </div>
+        <br>
+
+        <div style="text-align: center">
+          <%= link_to "Back to the list of all restaurants" , restaurants_path, class: 'btn btn-primary' %>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <!-- One of three columns -->
+    </div>
+
+  </div>
+</div>

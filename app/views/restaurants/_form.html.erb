@@ -1,0 +1,34 @@
+<br>
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-4">
+      <!-- One of three columns -->
+    </div>
+
+    <div class="col-sm-4">
+      <h1>New Restaurant</h1>
+
+        <%= simple_form_for(@restaurant) do |f| %>
+
+          <%= f.input :name %>
+          <%= f.input :category, collection: Restaurant::CATEGORIES %>
+          <%= f.input :address %>
+          <%= f.input :phone_number %>
+
+          <div style="text-align: center">
+          <%= f.submit class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      <br>
+      <div style="text-align: center">
+      <%= link_to "Back to the list of all restaurants" , restaurants_path, class: 'btn btn-primary' %>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <!-- One of three columns -->
+    </div>
+
+  </div>
+</div>

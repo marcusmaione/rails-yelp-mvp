@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-4">
+      <!-- One of three columns -->
+    </div>
+
+    <div class="col-sm-4">
+      <div style="margin-left: 20px">
+        <h1>All restaurants:</h1>
+        <ul>
+          <% @restaurants.each do |restaurant| %>
+            <li><%= link_to restaurant.name , restaurant_path(restaurant.id) %></li>
+          <% end %>
+        </ul>
+        <div style="text-align: center">
+        <%= link_to "Create new restaurant" , new_restaurant_path, class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <!-- One of three columns -->
+    </div>
+
+  </div>
+</div>
